@@ -63,23 +63,18 @@
             width: 90%;
             max-width: 350px;
             height: auto;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.3s forwards;
         }
 
         .content a {
             display: block;
             width: 90%;
             max-width: 350px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.6s forwards;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease;
             text-decoration: none;
         }
 
         .content a:hover {
             transform: scale(1.05);
-            opacity: 0.9;
         }
 
         .content a:active {
@@ -91,17 +86,6 @@
             height: auto;
             cursor: pointer;
             display: block;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         @media (min-width: 768px) {
