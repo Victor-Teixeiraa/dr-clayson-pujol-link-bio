@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Clayson Pujol - Link Bio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #202020;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #202020;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            object-position: center top;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .content {
+            width: 100%;
+            padding: 30px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            position: fixed;
+            bottom: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 480px;
+            z-index: 2;
+        }
+
+        .texto-image {
+            width: 90%;
+            max-width: 350px;
+            height: auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
+
+        .content a {
+            display: block;
+            width: 90%;
+            max-width: 350px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .content a:active {
+            transform: scale(0.98);
+        }
+
+        .botao-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                overflow: hidden;
+            }
+
+            .container {
+                max-width: 100%;
+                width: 100vw;
+            }
+
+            .hero-image {
+                content: url('HERO-PC.png');
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+            .content {
+                position: fixed;
+                right: 120px;
+                top: 180px;
+                left: auto;
+                bottom: auto;
+                transform: none;
+                max-width: 550px;
+                width: auto;
+                padding: 20px;
+                gap: 100px;
+            }
+
+            .texto-image {
+                width: auto;
+                max-width: 450px;
+            }
+
+            .content a {
+                width: auto;
+                max-width: 520px;
+            }
+
+            .botao-image {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .texto-image,
+            .botao-image {
+                width: 85%;
+            }
+
+            .content {
+                padding: 20px;
+                gap: 20px;
+                bottom: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="HERO-MOBILE.png" alt="Dr. Clayson Pujol" class="hero-image">
+
+        <div class="content">
+            <img src="TEXTO 1.png" alt="Texto" class="texto-image">
+            <a href="https://wa.me/5545999871918?text=Olá%2C%20Dr.%20Clayson!%20%F0%9F%91%8B%0A%0AVim%20pelo%20link%20da%20bio%20e%20gostaria%20de%20agendar%20minha%20consulta.%0A%0APoderia%20me%20passar%20as%20op%C3%A7%C3%B5es%20de%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener noreferrer">
+                <img src="BOTÃO.png" alt="Agendar consulta" class="botao-image">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function abrirWhatsApp() {
+            // Substitua pelo n�mero de WhatsApp desejado (com c�digo do pa�s, sem espa�os ou caracteres especiais)
+            const numeroWhatsApp = '5545999871918'; // +55 45 99987-1918
+            const mensagem = 'Olá, Dr. Clayson! 👋\n\nVim pelo link da bio e gostaria de agendar minha consulta.\n\nPoderia me passar as opções de horários disponíveis?';
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
