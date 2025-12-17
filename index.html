@@ -156,7 +156,7 @@
 
         <div class="content">
             <img src="TEXTO%201.png" alt="Texto" class="texto-image">
-            <a href="https://wa.me/5545991326297?text=Ol%C3%A1%2C%20Dr.%20Clayson!%20%F0%9F%91%8B%0A%0AVim%20atrav%C3%A9s%20do%20link%20da%20sua%20bio%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5545991326297?text=Ol%C3%A1%2C%20Dr.%20Clayson!%0A%0AVim%20atrav%C3%A9s%20do%20link%20da%20sua%20bio%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
                 <img src="BOTÃO.png" alt="Agendar consulta" class="botao-image">
             </a>
         </div>
@@ -166,7 +166,7 @@
         function abrirWhatsApp() {
             // Substitua pelo n�mero de WhatsApp desejado (com c�digo do pa�s, sem espa�os ou caracteres especiais)
             const numeroWhatsApp = '5545991326297'; // +55 45 99132-6297
-            const mensagem = 'Olá, Dr. Clayson! 👋\n\nVim através do link da sua bio e gostaria de agendar uma consulta.';
+            const mensagem = 'Olá, Dr. Clayson!\n\nVim através do link da sua bio e gostaria de agendar uma consulta.';
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
             window.open(url, '_blank');
         }
